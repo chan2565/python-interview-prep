@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-slim
         steps:
             - uses: actions/checkout@v4
-            - name: Set Up Python 3.16
+            - name: Set Up Python 3.14
               uses: actions/setup-python@v3
               with:
                 python-version: "3.16"

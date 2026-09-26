@@ -2,7 +2,7 @@ def calculate_total(items):
     """Calculate the total price of all items in the cart."""
     total = 0
     for item in items:
-        total += item["price"]
+        total += float(item["price"])
     return total
 
 

@@ -15,6 +15,6 @@ def format_receipt(items, total):
     """Format a receipt string listing each item and the total."""
     lines = []
     for item in items:
-        lines.append(f"{item['name']}: {item['price']}")
+        lines.append(f"{item['name']}: ${item['price']}")
     lines.append(f"Total: ${total:.2f}")
     return "\n".join(lines)

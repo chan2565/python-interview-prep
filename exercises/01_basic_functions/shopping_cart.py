@@ -8,7 +8,7 @@ def calculate_total(items):
 
 def apply_discount(total, percent):
     """Apply a percentage discount to the total."""
-    return total - (total * percent)
+    return total - (total * (percent / 100))
 
 
 def format_receipt(items, total):

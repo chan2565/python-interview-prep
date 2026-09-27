@@ -5,9 +5,9 @@ def title_case(text):
     result = text.lower()
     output = list(result)
     for i in range(len(output)):
-        if i > 0 and output[i - 1] == " ":
-            output[i] = output[i].upper()
         if i == 0:
+            output[i] = output[i].upper()
+        if i > 0 and output[i - 1] == " ":
             output[i] = output[i].upper()
     return "".join(output)
 
@@ -21,7 +21,7 @@ def truncate(text, max_length):
     """
     if len(text) <= max_length:
         return text
-    return text[:max_length] + "..."
+    return text[:max_length - 3] + "..."
 
 
 def word_wrap(text, width):

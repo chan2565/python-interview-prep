@@ -7,6 +7,8 @@ def title_case(text):
     for i in range(len(output)):
         if i > 0 and output[i - 1] == " ":
             output[i] = output[i].upper()
+        if i == 0:
+            output[i] = output[i].upper()
     return "".join(output)
 
 

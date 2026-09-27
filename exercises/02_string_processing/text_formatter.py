@@ -39,5 +39,5 @@ def word_wrap(text, width):
             lines.append(current_line)
             current_line = " " + word
 
-    lines.append(current_line)
+    lines.append(current_line.strip())
     return "\n".join(lines)

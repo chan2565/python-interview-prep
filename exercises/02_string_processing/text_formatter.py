@@ -37,7 +37,7 @@ def word_wrap(text, width):
             current_line += " " + word
         else:
             lines.append(current_line)
-            current_line = " " + word
+            current_line = word
 
     lines.append(current_line.strip())
     return "\n".join(lines)

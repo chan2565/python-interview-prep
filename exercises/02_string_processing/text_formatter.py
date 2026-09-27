@@ -21,6 +21,8 @@ def truncate(text, max_length):
     """
     if len(text) <= max_length:
         return text
+    if max_length <= 3:
+        return text[:max_length]
     return text[:max_length - 3] + "..."
 
 

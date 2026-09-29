@@ -24,4 +24,4 @@ jobs:
                 python -m pytest exercises/02_string_processing
             - name: Test Exercise 3 with pytest
               run: |
-                python -m pytest exercises/03_data_structures
+                python -m pytest exercises/03_class_basics

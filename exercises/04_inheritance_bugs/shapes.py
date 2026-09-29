@@ -30,6 +30,8 @@ class Square(Rectangle):
 
     def resize(self, new_side):
         self.side = new_side
+        self.width = new_side
+        self.height = new_side
 
 
 class Circle(Shape):

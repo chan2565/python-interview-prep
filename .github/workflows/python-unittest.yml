@@ -16,7 +16,7 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install pytest mypy ruff
                 if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-            - name: Test Exercisith pytest
+            - name: Test Exercise 1 with pytest
               run: |
                 python -m pytest exercises/01_basic_functions
             - name: Test Exercise 2 with pytest

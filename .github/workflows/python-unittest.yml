@@ -25,3 +25,6 @@ jobs:
             - name: Test Exercise 3 with pytest
               run: |
                 python -m pytest exercises/03_class_basics
+            - name: Test Exercise 4 with pytest
+              run: |
+                python -m pytest exercises/04_inheritance_bugs

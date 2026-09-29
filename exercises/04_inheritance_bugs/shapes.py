@@ -9,7 +9,7 @@ class Shape:
         raise NotImplementedError("Subclasses must implement area()")
 
     def __str__(self):
-        return f"{self.name}: area={self.area}"
+        return f"{self.name}: area={self.area()}"
 
 
 class Rectangle(Shape):

@@ -28,3 +28,6 @@ jobs:
             - name: Test Exercise 4 with pytest
               run: |
                 python -m pytest exercises/04_inheritance_bugs
+            - name: Test Exercise 5 with pytest
+              run: |
+                python -m pytest exercises/05_test_interpretation

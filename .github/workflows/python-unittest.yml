@@ -31,3 +31,6 @@ jobs:
             - name: Test Exercise 5 with pytest
               run: |
                 python -m pytest exercises/05_test_interpretation
+            - name: Test Exercise 6 with pytest
+              run: |
+                python -m pytest exercises/06_mutable_default_args

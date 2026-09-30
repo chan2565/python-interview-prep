@@ -1,11 +1,14 @@
 def validate_email(email):
     """Return True if email contains '@' with a '.' after the '@'."""
-    return "@" in email
+    if "@" in email:
+        if "." in email.split("@")[1]:
+            return True
+    return False
 
 
 def validate_password(password):
     """Return True if password is at least 8 characters and contains a digit."""
-    if len(password) > 8 and any(ch.isdigit() for ch in password):
+    if len(password) >= 8 and any(ch.isdigit() for ch in password):
         return True
     return False
 

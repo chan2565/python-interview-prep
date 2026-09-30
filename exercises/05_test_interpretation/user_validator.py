@@ -17,6 +17,8 @@ def validate_username(username):
     """Return True if username is alphanumeric, starts with a letter, 3-20 chars."""
     if len(username) < 3 or len(username) > 20:
         return False
+    if username[0].isdigit():
+        return False
     return username.isalnum()
 
 

@@ -26,15 +26,22 @@ def validate_user(user_dict):
     """Validate all fields in user_dict. Raise ValueError for missing/invalid fields."""
     try:
         email = user_dict["email"]
-        password = user_dict["password"]
-        username = user_dict["username"]
     except:
-        return False
-
+        raise ValueError("Invalid email address")
     if not validate_email(email):
         raise ValueError("Invalid email address")
+
+    try:
+        password = user_dict["password"]
+    except:
+        raise ValueError("Invalid password")
     if not validate_password(password):
         raise ValueError("Invalid password")
+
+    try:
+        username = user_dict["username"]
+    except:
+        raise ValueError("Invalid username")    
     if not validate_username(username):
         raise ValueError("Invalid username")
 

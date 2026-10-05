@@ -9,7 +9,7 @@ class Shape:
         raise NotImplementedError("Subclasses must implement area()")
 
     def __str__(self):
-        return f"{self.name}: area={self.area}"
+        return f"{self.name}: area={self.area()}"
 
 
 class Rectangle(Shape):
@@ -30,6 +30,8 @@ class Square(Rectangle):
 
     def resize(self, new_side):
         self.side = new_side
+        self.width = new_side
+        self.height = new_side
 
 
 class Circle(Shape):
@@ -38,4 +40,4 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return self.radius * 2 * math.pi
+        return self.radius ** 2 * math.pi

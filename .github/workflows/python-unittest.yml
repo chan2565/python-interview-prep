@@ -1,0 +1,36 @@
+name: pytest
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-slim
+        steps:
+            - uses: actions/checkout@v7
+            - name: Set Up Python 3.14
+              uses: actions/setup-python@v7
+              with:
+                python-version: "3.14"
+            - name: Install Dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install pytest mypy ruff
+                if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+            - name: Test Exercise 1 with pytest
+              run: |
+                python -m pytest exercises/01_basic_functions
+            - name: Test Exercise 2 with pytest
+              run: |
+                python -m pytest exercises/02_string_processing
+            - name: Test Exercise 3 with pytest
+              run: |
+                python -m pytest exercises/03_class_basics
+            - name: Test Exercise 4 with pytest
+              run: |
+                python -m pytest exercises/04_inheritance_bugs
+            - name: Test Exercise 5 with pytest
+              run: |
+                python -m pytest exercises/05_test_interpretation
+            - name: Test Exercise 6 with pytest
+              run: |
+                python -m pytest exercises/06_mutable_default_args

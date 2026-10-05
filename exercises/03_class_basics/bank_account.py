@@ -1,9 +1,8 @@
 class BankAccount:
-    transaction_history = []
-
     def __init__(self, owner, balance=0):
         self.owner = owner
         self.balance = balance
+        self.transaction_history = []
 
     def deposit(self, amount):
         self.balance += amount
@@ -11,14 +10,15 @@ class BankAccount:
 
     def withdraw(self, amount):
         if amount > self.balance:
-            return True
+            return False
         self.balance -= amount
         self.transaction_history.append(f"withdraw:{amount}")
-        return False
+        return True
 
     def get_balance(self):
         return self.balance
 
     def transfer(self, other_account, amount):
-        self.withdraw(amount)
+        if not self.withdraw(amount):
+            return
         other_account.deposit(amount)
